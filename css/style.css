@@ -71,7 +71,8 @@
 main {
     display: grid;
     gap: 15px;
-    grid-template-columns: 220px repeat( 4, 1fr);
+    /*grid-template-columns: 220px repeat( 4, 1fr);*/
+    grid-template-columns: [aside]220px [segunda-coluna]1fr [terceira-coluna] 1fr [quarta-coluna] 1fr [quinta-coluna]1fr;
     grid-template-rows: repeat(5, 200px);
     grid-auto-flow: column;
     grid-template-areas: 
@@ -99,4 +100,8 @@ main {
 main .home-videos {
     grid-area: videos;
     margin-top: 30px;
+}
+
+main .home-videos .item-01 {
+grid-column: terceira-coluna / 3;
 }
