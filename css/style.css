@@ -68,22 +68,10 @@
 
 /*SIDEBAR*/
 
-main {
-    display: grid;
-    gap: 15px;
-    /*grid-template-columns: 220px repeat( 4, 1fr);*/
-    grid-template-columns: [aside]220px [segunda-coluna]1fr [terceira-coluna] 1fr [quarta-coluna] 1fr [quinta-coluna]1fr;
-    grid-template-rows: repeat(5, 200px);
-    grid-auto-flow: column;
-    grid-template-areas: 
-    "aside videos videos videos videos" 
-    "aside videos videos videos videos"
-    "aside videos videos videos videos";
-}
-
 .sidebar {
-    padding: 20px;
+    padding: 6px;
     grid-area: aside;
+    margin-top: 30px;
 }
 
 .sidebar .sidebar-menu ul li{
@@ -96,12 +84,21 @@ main {
 }
 
 /*VIDEOS*/
-
-main .home-videos {
-    grid-area: videos;
-    margin-top: 30px;
+ 
+.home-videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 12rem;
+    padding-bottom: 20rem;
+    margin-top: -25rem;
 }
 
-main .home-videos .item-01 {
-grid-column: terceira-coluna / 3;
+.home-videos .home-item {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 250px;
+}
+
+.home-videos .home-item p {
+    font-size: 15px;
 }
